@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Отображаем поисковый запрос в заголовке вкладки -->
+    <title>News results for "{{ query }}"</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        /* Добавим немного стилей для результатов */
+        body {
+            font-family: sans-serif;
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 0 1em;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #333;
+            margin-bottom: 0.5em;
+        }
+        .search-again-form { /* Стили для формы "поискать снова" */
+            display: flex;
+            gap: 10px;
+            margin: 1.5em 0;
+            padding: 1em;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+        }
+        .search-again-form input[type="text"] {
+            flex-grow: 1;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+         .search-again-form button {
+            padding: 8px 15px;
+            background-color: #28a745; /* Зеленый цвет для отличия */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.95em;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .search-again-form button:hover {
+             background-color: #218838;
+        }
+
+        .news-list { /* Список новостей */
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .news-item { /* Отдельная новость */
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 1.5em;
+            margin-bottom: 1.5em;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: box-shadow 0.2s ease;
+        }
+        .news-item:hover {
+             box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+        }
+        .news-item h3 { /* Заголовок новости */
+            margin-top: 0;
+            margin-bottom: 0.5em;
+            font-size: 1.2em;
+        }
+        .news-item h3 a { /* Ссылка в заголовке */
+            text-decoration: none;
+            color: #0056b3;
+        }
+        .news-item h3 a:hover {
+            text-decoration: underline;
+        }
+        .news-item p { /* Параграфы внутри новости */
+            margin-bottom: 0.5em;
+            color: #555;
+        }
+        .news-item .meta { /* Метаданные (источник, дата) */
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 1em; /* Отступ перед summary */
+        }
+        .news-item .summary { /* Краткое содержание */
+             color: #444;
+        }
+        .no-results { /* Сообщение, если ничего не найдено */
+             color: #777;
+             text-align: center;
+             padding: 2em;
+             background-color: #f9f9f9;
+             border-radius: 8px;
+        }
+         a.back-link { /* Ссылка "назад" */
+            display: inline-block;
+            margin-top: 2em;
+            color: #007bff;
+            text-decoration: none;
+        }
+         a.back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>News results for "{{ query }}"</h1>
+
+    <!-- Форма для нового поиска -->
+    <form action="/news" method="get" class="search-again-form">
+        <input type="text" name="query" value="{{ query }}" required placeholder="Enter another search term...">
+        <button type="submit">Search Again</button>
+    </form>
+
+    <h2>Results:</h2>
+
+    {# Проверяем, пуст ли список статей #}
+    {% if articles.is_empty() %}
+        <p class="no-results">No news articles found matching "{{ query }}". Try a different search term.</p>
+    {% else %}
+        {# Если статьи есть, итерируем по ним с помощью цикла for #}
+        <ul class="news-list">
+            {% for article in articles %}
+            <li class="news-item">
+                <h3>
+                    {# Ссылка на оригинальную статью, открывается в новой вкладке #}
+                    <a href="{{ article.url }}" target="_blank" rel="noopener noreferrer">{{ article.title }}</a>
+                </h3>
+                <p class="meta">
+                    <strong>Source:</strong> {{ article.source }} <br>
+                    <strong>Date:</strong>
+                    {# Аккуратно обрабатываем Option<DateTime<Utc>> #}
+                    {% match article.published_at %}
+                      {% when Some with (datetime) %}
+                        {# Форматируем дату и время. Можно настроить формат. #}
+                        {{ datetime.format("%Y-%m-%d %H:%M:%S UTC") }}
+                      {% when None %}
+                        N/A {# Показываем N/A если дата отсутствует #}
+                    {% endmatch %}
+                </p>
+                <p class="summary">{{ article.summary }}</p>
+            </li>
+            {% endfor %} {# Конец цикла for #}
+        </ul>
+    {% endif %} {# Конец блока if/else #}
+
+    <hr>
+    <a href="/" class="back-link">← Back to main search page</a>
+
+</body>
+</html>

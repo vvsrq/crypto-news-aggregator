@@ -1,0 +1,11 @@
+/Users/mac/crypto-news-aggregator/target/debug/deps/libhyper_rustls-5fa9bebf521b7036.rmeta: /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/lib.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/config.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/connector.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/connector/builder.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/stream.rs
+
+/Users/mac/crypto-news-aggregator/target/debug/deps/libhyper_rustls-5fa9bebf521b7036.rlib: /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/lib.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/config.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/connector.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/connector/builder.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/stream.rs
+
+/Users/mac/crypto-news-aggregator/target/debug/deps/hyper_rustls-5fa9bebf521b7036.d: /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/lib.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/config.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/connector.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/connector/builder.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/stream.rs
+
+/Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/lib.rs:
+/Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/config.rs:
+/Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/connector.rs:
+/Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/connector/builder.rs:
+/Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.27.5/src/stream.rs:

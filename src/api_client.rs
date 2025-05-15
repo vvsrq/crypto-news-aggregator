@@ -50,14 +50,6 @@ impl ApiClient {
 
         log::debug!("Received NewsAPI response: Status='{}', TotalResults={:?}", api_response.status, api_response.total_results);
 
-        // if api_response.status != "ok" {
-        //     let error_message = api_response
-        //         .message
-        //         .unwrap_or_else(|| format!("Unknown API error code: {:?}", api_response.code));
-        //     log::error!("NewsAPI API Error: {}", error_message);
-        //     return Err(AppError::external_api_error("NewsAPI.org", error_message));
-        // }
-
         let articles: Vec<NewsArticle> = api_response
             .articles 
             .into_iter() 
@@ -68,13 +60,13 @@ impl ApiClient {
     }
 
     fn convert_newsapi_article(api_article: NewsApiArticle) -> NewsArticle {
-        // --- ИСПРАВЛЕНИЕ 3: Измененная логика для summary ---
+        // это для summary
     let summary_text = api_article.description.as_deref().unwrap_or("No summary available."); // Получаем &str или дефолтный
     let mut summary = summary_text.chars().take(200).collect::<String>(); // Берем первые 200 символов
 
-    // Проверяем, была ли строка длиннее 200 символов *в оригинале*
+    // Проверяем, была ли строка длиннее 200 символов
     if summary_text.chars().count() > 200 {
-        summary.push_str("..."); // Добавляем многоточие, если обрезали
+        summary.push_str("..."); // Добавляем многоточие
     }
         NewsArticle {
             title: api_article.title.clone(),

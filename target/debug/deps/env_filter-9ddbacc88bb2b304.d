@@ -1,0 +1,12 @@
+/Users/mac/crypto-news-aggregator/target/debug/deps/libenv_filter-9ddbacc88bb2b304.rmeta: /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/lib.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/directive.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/filter.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/filtered_log.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/op.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/parser.rs
+
+/Users/mac/crypto-news-aggregator/target/debug/deps/libenv_filter-9ddbacc88bb2b304.rlib: /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/lib.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/directive.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/filter.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/filtered_log.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/op.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/parser.rs
+
+/Users/mac/crypto-news-aggregator/target/debug/deps/env_filter-9ddbacc88bb2b304.d: /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/lib.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/directive.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/filter.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/filtered_log.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/op.rs /Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/parser.rs
+
+/Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/lib.rs:
+/Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/directive.rs:
+/Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/filter.rs:
+/Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/filtered_log.rs:
+/Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/op.rs:
+/Users/mac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/env_filter-0.1.3/src/parser.rs:
